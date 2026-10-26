@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Define a codificação para aceitar acentos e caracteres especiais -->
+    <meta charset="UTF-8">
+
+    <!-- Permite adaptar a página à largura da tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Conversor de Unidades</title>
+
+</head>
+
+<body>
+
+    <!-- Painel principal: contém todos os elementos do conversor -->
+    <main class="conversor">
+
+        <h1>Conversor de Unidades</h1>
+
+        <label class="grandeza" for="grandezas">
+            Escolha a <strong>grandeza</strong> da unidade:
+        </label>
+
+        <select class="grandeza-select" id="grandezas" name="grandezas">
+            <option value="comprimento">Comprimento</option>
+            <option value="velocidade">Velocidade</option>
+            <option value="temperatura">Temperatura</option>
+        </select>
+
+        <!--
+            Primeira linha: contém os seletores de unidade
+            de entrada e de saída, lado a lado.
+        -->
+        <div class="linha unidades">
+
+            <div class="campo">
+                <label for="entrada">
+                    Unidade de <strong>entrada</strong>
+                </label>
+
+                <!-- As opções serão preenchidas pelo JavaScript -->
+                <select id="entrada"></select>
+            </div>
+
+            <div class="campo">
+                <label for="saida">
+                    Unidade de <strong>saída</strong>
+                </label>
+
+                <!-- As opções também serão preenchidas pelo JavaScript -->
+                <select id="saida"></select>
+            </div>
+
+        </div>
+
+        <!--
+            Segunda linha: contém o campo numérico e o resultado,
+            posicionados lado a lado.
+        -->
+        <div class="linha">
+
+            <div class="campo">
+                <label for="numero">Digite o número</label>
+
+                <!-- step="any" permite inserir números decimais -->
+                <input type="number" id="numero" step="any">
+            </div>
+
+            <div class="campo">
+                <label for="resultado">Resultado</label>
+
+                <!--
+                    O JavaScript altera o conteúdo desta área.
+                -->
+                <div class="resultado" id="resultado" aria-live="polite"></div>
+            </div>
+
+        </div>
+
+        <!-- Botão que executa a função de conversão -->
+        <button type="button" id="converter">Converter</button>
+
+    </main>
+
+</body>
+</html>
