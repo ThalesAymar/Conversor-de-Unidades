@@ -1,0 +1,144 @@
+
+/* ==================================================
+   CONFIGURAÇÃO GERAL
+   ================================================== */
+
+/* Configura a fonte e centraliza o conteúdo na tela */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+
+    /* Faz o body ocupar, no mínimo, toda a altura da tela */
+    min-height: 100vh;
+
+    /* Utiliza Flexbox para centralizar o painel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Cor de fundo da página */
+    background: #f2f2f2;
+}
+
+
+/* ==================================================
+   PAINEL PRINCIPAL
+   ================================================== */
+
+/* Estiliza o painel que contém o conversor inteiro */
+.conversor {
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+
+    /* Adiciona uma sombra ao redor do painel */
+    box-shadow: 0 0 10px #ccc;
+
+    /* Centraliza os textos e os elementos inline */
+    text-align: center;
+}
+
+
+/* ==================================================
+   ORGANIZAÇÃO DOS CAMPOS EM LINHAS
+   ================================================== */
+
+/*
+    A classe linha coloca os campos lado a lado.
+    Ela é utilizada tanto nos seletores de unidades
+    quanto no campo numérico e no resultado.
+*/
+.linha {
+    display: flex;
+    justify-content: center;
+
+    /* Espaço horizontal entre os campos */
+    gap: 20px;
+}
+
+
+/*
+    Cada campo organiza seu rótulo e seu elemento
+    (input, select ou resultado) verticalmente.
+*/
+.campo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* ==================================================
+   SELEÇÃO DA GRANDEZA
+   ================================================== */
+
+/* Configura o texto que aparece acima do seletor */
+.grandeza {
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* Remove o espaçamento superior específico do seletor */
+.grandeza-select {
+    margin-top: 0;
+}
+
+
+/* ==================================================
+   CAMPOS DE ENTRADA E SELETORES
+   ================================================== */
+
+/*
+    Aplica a mesma largura, preenchimento e espaçamento
+    aos campos numéricos, menus e caixa de resultado.
+*/
+input,
+select,
+.resultado {
+    width: 180px;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+
+/* ==================================================
+   ESPAÇAMENTO ENTRE GRANDEZA E UNIDADES
+   ================================================== */
+
+/* Cria espaço entre o seletor de grandeza e os menus */
+.unidades {
+    margin: 45px 0 20px;
+}
+
+
+/* ==================================================
+   CAIXA DE RESULTADO
+   ================================================== */
+
+/* Define a aparência do local em que o resultado aparece */
+.resultado {
+    min-height: 35px;
+    border: 1px solid #767676;
+    border-radius: 2px;
+    background: #f9f9f9;
+
+    /* Alinha o resultado à esquerda dentro da caixa */
+    text-align: left;
+
+    /* Permite quebrar textos longos, se necessário */
+    overflow-wrap: anywhere;
+}
+
+
+/* ==================================================
+   BOTÃO DE CONVERSÃO
+   ================================================== */
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    /* Indica visualmente que o botão pode ser clicado */
+    cursor: pointer;
+}
