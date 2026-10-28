@@ -1,5 +1,9 @@
 # Conversor de Unidades
 
+## Demonstração
+
+![Tela do conversor de unidades](images/exemplo_tela.PNG)
+
 ## Sobre o projeto
 
 Este projeto consiste em uma aplicação web para conversão de unidades de medida. O usuário pode selecionar uma grandeza física, informar um valor numérico, escolher as unidades de entrada e saída e obter o resultado da conversão.
@@ -77,6 +81,10 @@ O cálculo é realizado em duas etapas:
 2. Conversão da unidade de referência para a unidade desejada.
 
 Para temperatura, a aplicação utiliza fórmulas específicas de conversão entre Celsius, Kelvin e Fahrenheit.
+
+## Captura da aba Rede
+
+![Tela do conversor de unidades](images/requisicao_http.PNG)
 
 ## Possíveis melhorias futuras
 
